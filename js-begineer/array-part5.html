@@ -121,7 +121,7 @@ function myFunction(item) {
                  // splice taring index se last  elemnet  tak show hoga slice me(last  point bhi show hoga )
                  let ar= [10,20,30,40,50,60,70,80];
                  let anew= ar.splice(1,3);
-                 console.log(anew)
+                //  console.log(anew)
 
 
                  //Tostring (convert in string)
@@ -148,16 +148,94 @@ function myFunction(item) {
                         return val==10
                     })
                     // console.log(ankia)
-                       console.log(ank)
+                       //console.log(ank)
                   
                            
                     // split (break krna)
                     let sp='10,20,30'
                     let arr= sp.split(',')
                     arr.forEach(element=>{
-                        console.log(element);// split krega dikhega
+                       // console.log(element);// split krega dikhega
                     });
-                    console.log(arr);  // array me dikhega 
+                  //  console.log(arr);  // array me dikhega 
+
+
+                          // for in and for of
+                        let arry= [409,787,757,646,736,654]
+                               for(let arryindex in arry){
+                               // console.log(arryindex)  // print in index
+                               // console.log(arry[arryindex]) // print value 
+
+                               }
+                        let ary= [409,787,757,646,736,654]
+                               for(let arryindex of ary){
+                                //console.log(arryindex)  // print direct value
+                               
+
+                               }
+                              // note
+                              // for in jo hai index print hota hai use bad index se uska value print krte hai but for of me direct value print hota hai
+                              
+                             
+
+                              // multidimension array 
+
+                  let student= [
+                    ["john",90],
+                    ["rupesh",25],
+                    ["anika",3],
+                    ["rounk",5],
+                    ["janvi",7],
+                  ]
+                  // console.log(student)
+                  // particular access
+                  // mtlb length 5 or har elemnt ke andar array 2 element ka hai
+                   //particular access for row 
+                   //mtlab complete row array print krna hai jo 0 to 5 lenth me  present h
+                  // console.log(student[0])
+                  // console.log(student[1])
+                  // console.log(student[2])
+                  // console.log(student[3])
+                   //particular access for col jo ki 2 lenght me present h har value ke lie 
+                   //mtlab andar array ka particular value ko print krna h
+                  //  console.log(student[0][0])
+                  //  console.log(student[0][1])
+                   // 2nd row ka col
+                  //  console.log(student[1][0])
+                  //  console.log(student[1][1])
+
+                // print from loop
+                let stu= [
+                    ["john",90],
+                    ["rupesh",25],
+                    ["anika",3],
+                    ["rounk",5],
+                    ["janvi",7],
+                  ]
+                for(let i=0; i<stu.length; i++){
+                    // console.log(stu);
+                    for(let j=0; j<stu[i].length; j++){
+                        // console.log(stu);
+                        // console.log(stu[i][j]);
+                    }
+                }
+
+                // foreach 
+                stu.forEach(data=>{
+                  data.forEach(val=>{
+
+                    console.log(val)
+
+                  })
+                })
+
+                // for of
+                for(let stuValue of stu  ){
+                  for (let i of stuValue){
+                    // console.log(i);
+                  }
+                }
+               
 
 
 
