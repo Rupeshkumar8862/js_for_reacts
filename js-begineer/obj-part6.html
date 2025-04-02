@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js object</title>
+</head>
+<body>
+    <script>
+        //example 1
+        let obj ={name:"Brav",age:89,
+                "last name":"Bahadur"//space ka stt
+                 }
+
+        console.log(obj.name)
+        console.log(obj.age)
+        console.log(obj["age"])
+       // console.log(obj["name"])  // squer bracket se bhi pritn kr skte h
+        // notes this is a normal way of object
+        console.log(obj["last name"])  // space ka sth string print krna h to
+
+           //example 2
+// object fn sth (mtlb yaha function ko called krenge)
+let object ={n:"Rupesh",course:"BE",
+    fn:function (){
+        console.log("i am function")
+
+    }
+}       
+//console.log(object.fn())  // console.log hide undefine ht jaega
+ //(object.fn())  
+
+
+    //example 3
+// object sath array and function ka use (mtlb yaha fn array dono ko print krenge)
+let objbaba ={n:"Ramesh",course:"B.TECH",
+    fnn:function (){
+        console.log("i am function")
+
+    },
+    arr:[67,545,75,645]
+ 
+}  
+// extra propeties add inside obje
+//objbaba.key="item"  // add exta propettis
+//objbaba.fnn()  // fn called and print 
+//console.log(objbaba.arr)// array called hota h
+//console.log(objbaba)// object called hota h//
+// ab for in loop se object ko print krengs
+for(let i in objbaba){
+    //console.log(i)      // i se srae key print hota h 
+   // console.log(objbaba[i])// value(arr)  ke lie squre braket use kre
+}
+// but for of loop se direct value hi print ota h
+   for(let i of Object.keys(objbaba)){
+    //console.log(i) // all key of object
+    //console.log(objbaba[i]) // all value of object arr
+   }
+
+
+
+
+   //Example inside Array use object
+   let arry=[
+    {user:1,name:"Rupeshkumar"},
+    {user:2,name:"znika"},
+    {user:3,name:"sarika"}
+   ]
+   //console.log(arry)
+  // console.log(arry[2])// access particular 
+   // value printing ke for in loop use (index,value print)
+   for(let i in arry){
+    //console.log(i)  // index print hoga i se
+   // console.log(arry[i])  // value ke sth print
+
+   }
+// value printing ke for of loop use (value only and particular alll)
+ for(let i of arry){
+    //console.log(i) 
+    console.log(i.name) // particuar all 
+ }
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

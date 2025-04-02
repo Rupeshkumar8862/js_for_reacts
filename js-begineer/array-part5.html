@@ -204,6 +204,17 @@ function myFunction(item) {
                   //  console.log(student[1][0])
                   //  console.log(student[1][1])
 
+
+
+
+
+
+
+
+
+
+
+
                 // print from loop
                 let stu= [
                     ["john",90],
@@ -237,8 +248,55 @@ function myFunction(item) {
                 }
                
 
+                    
+                //@@@@@ ARRAY PUSH AND SPREAD  (dono element copy ke lie use krte hai)
+                // arr1=["john",76,true]
+                // arr2=arr1;
+                // console.log(arr1);
+                // console.log(arr2);     // dono same hai 
 
 
+               // arr1=["john",76,true]
+               // arr2=arr1;
+               // arr1.push("Berg")  // arr2.push("Berg")    // dono push hoga 
+               
+                // console.log(arr1);
+                // console.log(arr2);
+
+                //  ek me push krna hai (pahle slice krke push krenge to ek me push hoga )
+                 let arr1=["john",76,true]
+                //let  arr2=arr1.slice(0)   // yaha bhi concat krek add kr skte 
+                // let  arr2=arr1.slice(0).concat("item")
+                let  arr2=[...arr1]  // spread operator for copy (synax [...array])
+                arr2.push("Berg","Gerg")
+                console.log(arr1);
+                console.log(arr2);
+                
+
+
+
+
+  // array destructuring 
+                // agar ek array elemnt ko 2 alg alg variable me dikhana hai to kese dikhe
+                //simple way
+                let array1=["Thomas","chad"]
+                let var1=array1[0]
+                let var2=array1[1]
+                console.log(var1)
+                console.log(var2)
+                // this is not good way to doing this 
+
+                // good way
+              // let array2=["Thomas","chad"]  // or var elemet add kr skte h
+              let array2=["Thomas","chad","rat"]
+              // let [var3,var4]=array1
+              let [var3,var4,var5]=array2
+                console.log(var3)
+                console.log(var4)
+                console.log(var5)
+
+
+ 
           
 
              
